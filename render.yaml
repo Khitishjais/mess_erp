@@ -1,0 +1,8 @@
+# Optional blueprint. Easier: in Render choose New > Web Service > your GitHub repo, Runtime = Docker, Instance = Free.
+services:
+  - type: web
+    name: petpos-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/v1/auth/login/
+    autoDeploy: true
